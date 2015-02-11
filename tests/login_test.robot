@@ -4,7 +4,7 @@ Documentation   Tests for the Login Page only. Successful logins are tested
 ...		only run on mobile devices, hence should be excluded when
 ...		testing desktop and/or tablet
 Resource	../resources/login_resources.robot
-Suite Setup	Environment setup
+Suite Setup	Open test browser
 Suite Teardown	Teardown Browser
 
 *** Test Cases ***
