@@ -1,0 +1,6 @@
+.DS_STORE
+log.html
+output.xml
+report.html
+*test_results*
+*.pyc
