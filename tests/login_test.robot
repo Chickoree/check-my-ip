@@ -9,4 +9,5 @@ Suite Teardown	Teardown Browser
 
 *** Test Cases ***
 I can see my IP address
+	Sleep	20s
 	I should see the "IP_DETAILS" page is responsive
