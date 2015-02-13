@@ -20,6 +20,7 @@ ${TEST TAGS}
 #   BEGIN GENERIC KEYWORDS
 Open test browser
 	[Documentation]    Open Browser ${BROWSER} to ${HOST} for testing ${SUITE_NAME}
+	Create Directory	${OUTPUT DIR}/screenshots/${SUITE_NAME}/
 	Run Keyword If  '${SAUCE_URL}' != ''	Open Browser    ${HOST}
 	...   remote_url=${SAUCE_URL}
 	...   desired_capabilities=${SAUCE_CAPABILITIES}
