@@ -19,13 +19,13 @@ ${TEST TAGS}
 *** Keywords ***
 #   BEGIN GENERIC KEYWORDS
 Open test browser
-	[Documentation]    Open Browser ${SELENIUM_BROWSER} to ${HOST} for testing ${SUITE_NAME}
+	[Documentation]    Open Browser ${BROWSER} to ${HOST} for testing ${SUITE_NAME}
 	Create Directory	${OUTPUT DIR}/screenshots/${SUITE_NAME}/
 	Run Keyword If  '${SAUCE_URL}' != ''	Open Browser    ${HOST}
 	...   remote_url=${SAUCE_URL}
 	...   desired_capabilities=${SAUCE_CAPABILITIES}
 	Run Keyword If  '${SAUCE_URL}' == ''
-	...   Open Browser    ${HOST}	browser=${SELENIUM_BROWSER}
+	...   Open Browser    ${HOST}	browser=${BROWSER}
 #	Run Keyword If	'${DEVICE}' == 'desktop'
 	Maximize Browser Window
 #	Run Keyword If	'${DEVICE}' == 'mobile'
