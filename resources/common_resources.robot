@@ -49,7 +49,7 @@ Teardown Take Failure Snapshot
 	Run Keyword If Test Failed    Capture Screenshot    screenshots/failed_tests/${TEST_NAME}.png
 	Run Keyword If  '${SAUCE_URL}' != ''	Report Sauce status
 	...     ${SUITE_NAME} | ${TEST_NAME}
-	...     ${SUITE_STATUS}  ${TEST TAGS}  ${SAUCE_URL}
+	...     ${SUITE STATUS}  ${TEST TAGS}  ${SAUCE_URL}
 	Run Keyword If  '${APPLITOOLS_KEY}' != ''
 	...   Run Keyword And Continue On Failure   Close Eyes Session
 	Close all browsers
@@ -57,7 +57,7 @@ Teardown Take Failure Snapshot
 Teardown Browser
 	Run Keyword If  '${SAUCE_URL}' != ''	Report Sauce status
 	...     ${SUITE_NAME} | ${TEST_NAME}
-	...     ${SUITE_STATUS}  ${TEST TAGS}  ${SAUCE_URL}
+	...     ${SUITE STATUS}  ${TEST TAGS}  ${SAUCE_URL}
 	Run Keyword If  '${APPLITOOLS_KEY}' != ''
 	...   Run Keyword And Continue On Failure   Close Eyes Session
 	Close all browsers
