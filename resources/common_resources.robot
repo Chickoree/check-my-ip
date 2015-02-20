@@ -55,6 +55,7 @@ Teardown Take Failure Snapshot
 	Close all browsers
 
 Teardown Browser
+	[Documentation]    ${SUITE_STATUS}	|	${SUITE STATUS}	|	${TEST TAGS}	|	${SAUCE_URL}
 	Run Keyword If  '${SAUCE_URL}' != ''	Report Sauce status
 	...     ${SUITE_NAME} | ${TEST_NAME}
 	...     ${SUITE STATUS}  ${TEST TAGS}  ${SAUCE_URL}
