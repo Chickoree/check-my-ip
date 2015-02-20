@@ -45,7 +45,6 @@ Open test browser
 	...     httpDebugLog=${APPLITOOLS_DEBUGLOG}
 
 Teardown Take Failure Snapshot
-	[Documentation]    ${SUITE_STATUS}	|	${SUITE STATUS}	|	${TEST TAGS}	|	${SAUCE_URL}
 	Create Directory	${OUTPUT DIR}/screenshots/failed_tests/
 	Run Keyword If Test Failed    Capture Screenshot    screenshots/failed_tests/${TEST_NAME}.png
 	Run Keyword If  '${SAUCE_URL}' != ''	Report Sauce status
@@ -55,7 +54,6 @@ Teardown Take Failure Snapshot
 	Close all browsers
 
 Teardown Browser
-	[Documentation]    ${SUITE_STATUS}	|	${SUITE STATUS}	|	${TEST TAGS}	|	${SAUCE_URL}
 	Run Keyword If  '${SAUCE_URL}' != ''	Report Sauce status
 	...     ${SUITE_NAME}	${SUITE STATUS}  ${TEST TAGS}  ${SAUCE_URL}
 	Run Keyword If  '${APPLITOOLS_KEY}' != ''
