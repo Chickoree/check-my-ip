@@ -9,5 +9,5 @@ Suite Teardown	Teardown Browser
 
 *** Test Cases ***
 I can see my IP address
-	Wait Until Keyword Succeeds	20s	1s	Element Should Be Visible	jquery="[id="main"]"
+	Wait Until Keyword Succeeds	20s	1s	Element Should Be Visible	jquery=[id="main"]
 	I should see the "IP_DETAILS" page is responsive
