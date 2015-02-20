@@ -45,11 +45,11 @@ Open test browser
 	...     httpDebugLog=${APPLITOOLS_DEBUGLOG}
 
 Teardown Take Failure Snapshot
+	[Documentation]    ${SUITE_STATUS}	|	${SUITE STATUS}	|	${TEST TAGS}	|	${SAUCE_URL}
 	Create Directory	${OUTPUT DIR}/screenshots/failed_tests/
 	Run Keyword If Test Failed    Capture Screenshot    screenshots/failed_tests/${TEST_NAME}.png
 	Run Keyword If  '${SAUCE_URL}' != ''	Report Sauce status
-	...     ${SUITE_NAME} | ${TEST_NAME}
-	...     ${SUITE STATUS}  ${TEST TAGS}  ${SAUCE_URL}
+	...     ${SUITE_NAME}	${SUITE STATUS}  ${TEST TAGS}  ${SAUCE_URL}
 	Run Keyword If  '${APPLITOOLS_KEY}' != ''
 	...   Run Keyword And Continue On Failure   Close Eyes Session
 	Close all browsers
@@ -57,8 +57,7 @@ Teardown Take Failure Snapshot
 Teardown Browser
 	[Documentation]    ${SUITE_STATUS}	|	${SUITE STATUS}	|	${TEST TAGS}	|	${SAUCE_URL}
 	Run Keyword If  '${SAUCE_URL}' != ''	Report Sauce status
-	...     ${SUITE_NAME} | ${TEST_NAME}
-	...     ${SUITE STATUS}  ${TEST TAGS}  ${SAUCE_URL}
+	...     ${SUITE_NAME}	${SUITE STATUS}  ${TEST TAGS}  ${SAUCE_URL}
 	Run Keyword If  '${APPLITOOLS_KEY}' != ''
 	...   Run Keyword And Continue On Failure   Close Eyes Session
 	Close all browsers
