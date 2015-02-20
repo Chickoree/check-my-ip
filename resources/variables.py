@@ -1,4 +1,4 @@
-HOST = 'http://www.wtfismyip.com'
+HOST = 'http://www.whatismyip.com/'
 BROWSER = 'firefox'
 DEVICE = 'desktop'
 SELENIUM_DELAY = 0
