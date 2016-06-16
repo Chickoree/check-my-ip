@@ -8,7 +8,7 @@ Library         Selenium2Library
 Library         Collections
 Library    	OperatingSystem
 Library		DateTime
-Library         RobotAppEyes
+#Library         RobotAppEyes
 Library		SauceLabs
 Variables	variables.py
 
